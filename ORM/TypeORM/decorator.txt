@@ -1,0 +1,27 @@
+-----------------------------------------------------------SƠ LƯỢC CHUNG-------------------------------------------------------------------------------------
+
+| Decorator                  | Ý nghĩa                             | Ghi chú                                                |
+|----------------------------|-------------------------------------|--------------------------------------------------------|
+| `@Entity()`                | Đánh dấu class là bảng DB           | Mỗi entity tương ứng một bảng                          |
+| `@Column()`                | Định nghĩa 1 cột trong bảng         | Có thể thêm option: `nullable`, `default`, ...         |
+| `@PrimaryGeneratedColumn()`| Cột id tự động tăng                 | Dùng làm khóa chính                                    |
+| `@PrimaryColumn()`         | Khóa chính thủ công (không tự tăng) | Dùng khi bạn muốn tự set ID                            |
+| `@CreateDateColumn()`      | Cột tự lưu ngày tạo                 | Auto lưu `createdAt`, không cần gán thủ công           |
+| `@UpdateDateColumn()`      | Cột tự lưu ngày cập nhật            | Auto cập nhật khi gọi `save()`                         |
+| `@DeleteDateColumn()`      | Dùng cho soft delete                | Dùng với `softRemove()` để không xóa thật              |
+| `@Generated()`             | Sinh giá trị tự động                | Hỗ trợ `uuid`, `increment`, v.v.                       |
+| `@VersionColumn()`         | Quản lý version (optimistic lock)   | Tự tăng khi mỗi lần cập nhật                           |
+| `@Index()`                 | Tạo chỉ mục cho cột                 | Tăng tốc truy vấn SELECT                               |
+| `@Unique()`                | Ràng buộc giá trị duy nhất          | Có thể dùng cho 1 hoặc nhiều cột                       |
+| `@Check()`                 | Thêm điều kiện CHECK SQL            | Ví dụ: `@Check("age > 0")`                             |
+| `@OneToOne()`              | Quan hệ 1-1                         | Cần thêm `@JoinColumn()` để xác định ai giữ FK         |
+| `@OneToMany()`             | Quan hệ 1-n                         | Bên 1 phải khai báo, bên n dùng `@ManyToOne()`         |
+| `@ManyToOne()`             | Quan hệ n-1                         | Thường dùng nhiều, luôn đặt phía n                     |
+| `@ManyToMany()`            | Quan hệ n-n                         | Cần thêm `@JoinTable()` ở 1 phía                       |
+| `@JoinColumn()`            | Bảng hiện tại giữ khóa ngoại        | Bắt buộc trong quan hệ 1-1 hoặc 1-n từ phía “owner”    |
+| `@JoinTable()`             | Tạo bảng trung gian                 | Chỉ dùng với `@ManyToMany()`                           |
+| `@RelationId()`            | Lấy id của entity liên kết          | Truy xuất `id` thay vì entity full                     |
+| `@BeforeInsert()`          | Hook trước khi insert               | Dùng để hash password, set default,...                 |
+| `@AfterUpdate()`           | Hook sau khi update                 | Xử lý logic sau khi lưu vào DB                         |
+
+----------------------------------------------------------------------------------------------------------------------------------------------------

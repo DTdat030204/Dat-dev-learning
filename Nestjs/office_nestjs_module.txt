@@ -3,5 +3,5 @@
 - Câu lệnh để tải về:
     npm install @nestjs/mapped-types
 - CÔng dụng:
-    Tạo DTO mới dựa trên DTO cũ (giống như Pick, Partial, Omit trong TypeScript). 
+    Tạo DTO mới dựa trên DTO cũ (giống như Pick, Partial, Omit trong TypeScript)
 ----------------------------------------------------------------------------------------------------------------------------------------------------
