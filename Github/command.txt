@@ -1,0 +1,4 @@
+1/ Cách để gán github vào 1 folder dự án:
+    git init
+    git remote add origin https://github.com/DTdat030204/Dat-dev-learning.git
+    

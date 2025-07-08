@@ -1,0 +1,11 @@
+1/ Câu lệnh bắt đầu 1 dự án Nestjs:
+    npx @nestjs/cli new ten-du-an
+
+
+2/ Tạo các module Nestjs:
+    Thành phần cần tạo	            |    Lệnh CLI NestJS	            |        Kết quả tạo ra
+    Module	                        |    nest g module <tên>	        |        Tạo file <tên>.module.ts
+    Controller	                    |    nest g controller <tên>	    |        Tạo <tên>.controller.ts, tự khai báo vào module
+    Service	                        |    nest g service <tên>	        |        Tạo <tên>.service.ts, tự khai báo vào providers
+    Resource (Module + CRUD)	    |    nest g resource <tên>	        |        Tạo luôn module, controller, service, file DTO, hỗ trợ CRUD REST
+
