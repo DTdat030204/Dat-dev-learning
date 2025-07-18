@@ -1,7 +1,33 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------
-1/ MAP-TYPES:
+1/ Map types:
 - Câu lệnh để tải về:
     npm install @nestjs/mapped-types
-- CÔng dụng:
-    Tạo DTO mới dựa trên DTO cũ (giống như Pick, Partial, Omit trong TypeScript)
+- Công dụng:
+    Tạo DTO mới dựa trên DTO cũ (giống như Pick, Partial, Omit trong TypeScript).
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------
+2/ ORM:
+- Câu lệnh để tải về:
+    npm install @nestjs/typeorm
+- Công dụng:
+    Cho phép dùng TypeORM để giao tiếp với database.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+3/ Config:
+- Câu lệnh để tải về:
+    npm install @nestjs/config
+- Công dụng:
+    Dùng để quản lý biến môi trường (env) và cấu hình.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+4/ Common:
+- Câu lệnh để tải về:
+    npm install @nestjs/Common
+- Công dụng:
+    Cung cấp các decorator như @Module, @Injectable, @Controller.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+npm install @nestjs/typeorm typeorm pg
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+npm install class-validator class-transformer

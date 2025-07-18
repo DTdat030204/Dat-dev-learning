@@ -1,0 +1,9 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+1/ Khái niệm:
+- Nestjs là 1 framework được viết bằng TypeScript.
+
+2/ Giải thích chi tiết:
+- NestJS là một framework backend được xây dựng dựa trên:
+    + Node.js
+    + Express.js
+    + Và TypeScript là ngôn ngữ chính.
