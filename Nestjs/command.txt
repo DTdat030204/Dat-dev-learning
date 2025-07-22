@@ -10,3 +10,4 @@
     Service	                        |    nest g service <tên>	        |        Tạo <tên>.service.ts, tự khai báo vào providers
     Resource (Module + CRUD)	    |    nest g resource <tên>	        |        Tạo luôn module, controller, service, file DTO, hỗ trợ CRUD REST
 
+

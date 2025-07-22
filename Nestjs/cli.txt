@@ -1,0 +1,62 @@
+----------------------------------------------------------------- Khái niệm CLI -------------------------------------------------------------------------------
+- Là giao diện dòng lệnh, cho phép người dùng tương tác với hệ thống máy tính hoặc công cụ phần mềm thông qua việc nhập các lệnh bằng văn bản trong terminal 
+hoặc console thay vì sử dụng giao diện đồ họa (GUI).
+
+--------------------------------------------------------------- CLI trong Nestjs -------------------------------------------------------------------------------
+1. Tổng quan:
+NestJS CLI là công cụ dòng lệnh giúp tạo, cấu hình và quản lý các phần trong dự án NestJS một cách nhanh chóng.
+
+2. Cú pháp chính:
+nest <command> [options]
+
+3. Các tùy chọn chung (Options):
+  -v, --version        → In ra phiên bản hiện tại của NestJS CLI.
+  -h, --help           → Hiển thị thông tin hướng dẫn sử dụng.
+
+4. Các lệnh chính (Commands):
+- new | n [options] [name]
+  → Tạo một ứng dụng NestJS mới.
+  Ví dụ: nest new my-app
+
+- build [options] [apps...]
+  → Biên dịch ứng dụng NestJS (TypeScript → JavaScript).
+  Ví dụ: nest build
+
+- start [options] [app]
+  → Khởi chạy ứng dụng NestJS.
+  Ví dụ: nest start
+
+- info | i
+  → Hiển thị thông tin chi tiết về project Nest hiện tại.
+
+- add [options] <library>
+  → Cài thêm thư viện bên ngoài được hỗ trợ chính thức.
+  Ví dụ: nest add @nestjs/swagger
+
+- generate | g [options] <schematic> [name] [path]
+  → Sinh (generate) các thành phần trong dự án như module, controller, service,...
+
+5. Các thành phần có thể generate (schematics):
+
+| name          | alias       | description
+|---------------|-------------|-----------------------------------------------
+| application   | application | Tạo một workspace ứng dụng mới
+| class         | cl          | Tạo một class mới
+| configuration | config      | Tạo file cấu hình CLI
+| controller    | co          | Tạo một controller
+| decorator     | d           | Tạo một decorator tùy chỉnh
+| filter        | f           | Tạo một exception filter
+| gateway       | ga          | Tạo một WebSocket gateway
+| guard         | gu          | Tạo một guard (bảo vệ route)
+| interceptor   | itc         | Tạo một interceptor
+| interface     | itf         | Tạo một interface (kiểu dữ liệu)
+| library       | lib         | Tạo một thư viện (trong môi trường monorepo)
+| middleware    | mi          | Tạo middleware
+| module        | mo          | Tạo một module
+| pipe          | pi          | Tạo một pipe (xử lý trước khi vào controller)
+| provider      | pr          | Tạo một provider (injectable class)
+| resolver      | r           | Tạo một GraphQL resolver
+| resource      | res         | Tạo một resource CRUD (tự động tạo controller, service, module,...)
+| service       | s           | Tạo một service
+| sub-app       | app         | Tạo một app phụ trong môi trường monorepo
+

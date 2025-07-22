@@ -1,0 +1,76 @@
+Đây là file giải thích về những phần kiến thức trong file explain_in_comment.txt
+------------------------------------------------------------------------Câu 1-----------------------------------------------------------------------------
+Arrow Function (Hàm mũi tên)
+----------------------------
+Arrow function là cú pháp viết hàm ngắn gọn trong JavaScript/TypeScript.
+Cú pháp:
+    const func = (param1, param2) => { /* thân hàm */ };
+
+Ví dụ:
+    const add = (a, b) => a + b;
+    const sayHello = name => console.log("Hello", name);
+
+Lưu ý: Arrow function không có binding riêng cho 'this', 'arguments'.
+
+-------------------------------
+Type Annotation (Khai báo kiểu)
+-------------------------------
+Type Annotation là cách khai báo kiểu dữ liệu cho biến, tham số, hoặc hàm.
+Cú pháp:
+    let age: number = 30;
+    const greet = (name: string): void => { console.log(name); };
+
+Ví dụ trong hàm arrow:
+    const multiply = (a: number, b: number): number => a * b;
+
+--------------------------
+Const Variable Declaration
+--------------------------
+const dùng để khai báo biến mà không thể gán lại giá trị mới cho biến đó.
+Cú pháp:
+    const x = 10;
+
+Lưu ý: const chỉ đảm bảo "binding" không đổi, nhưng giá trị bên trong object hoặc array vẫn có thể thay đổi.
+
+------
+Export
+------
+Từ khóa export dùng để xuất biến, hàm, class,... để có thể sử dụng ở file khác.
+Cú pháp:
+    export const value = 123;
+    export function doSomething() { ... }
+
+Khi import từ file khác:
+    import { value, doSomething } from './module';
+
+-----------------
+Decorator Factory
+-----------------
+Decorator Factory là một hàm trả về một decorator.
+Cú pháp:
+    function Roles(...roles: string[]) {
+        return function (target: any, key?: string | symbol, descriptor?: PropertyDescriptor) {
+            // logic của decorator
+        }
+    }
+
+Ví dụ trong NestJS:
+    export const Roles = (roles: Role[]) => SetMetadata(ROLES_KEY, roles);
+
+Ở đây, Roles là một decorator factory, nó nhận tham số rồi tạo ra decorator gắn metadata.
+
+-----------------------------------
+Higher-order Function (Hàm bậc cao)
+-----------------------------------
+Higher-order function là hàm nhận một hàm khác làm tham số, hoặc trả về một hàm khác.
+Ví dụ:
+    function withLogging(fn) {
+        return function(...args) {
+            console.log("Calling function...");
+            return fn(...args);
+        }
+    }
+
+Trong đoạn code:
+    const Roles = (roles: Role[]) => SetMetadata(ROLES_KEY, roles);
+- Đây là hàm bậc cao vì nó trả về một hàm khác (do SetMetadata tạo ra).
