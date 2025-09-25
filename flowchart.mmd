@@ -1,0 +1,23 @@
+sequenceDiagram
+    participant Người dùng
+    participant Hệ thống
+    Người dùng->>Hệ thống: Đăng nhập
+    alt Lần đầu đăng nhập
+        Hệ thống->>Người dùng: Hiển thị thông báo bổ sung thông tin
+    end
+    Hệ thống->>Người dùng: Hiển thị menu
+    Người dùng->>Hệ thống: Nhấn vào avatar
+    Hệ thống->>Người dùng: Hiển thị giao diện "Tài khoản của tôi"
+    Người dùng->>Hệ thống: Cập nhật thông tin tài khoản
+    alt Giá trị không hợp lệ
+        Hệ thống->>Người dùng: Hiển thị thông báo "Giá trị không hợp lệ"
+    else Giá trị hợp lệ
+        Người dùng->>Hệ thống: Nhấn nút "Lưu thay đổi"
+        alt Thông tin chưa đầy đủ
+            Hệ thống->>Người dùng: Hiển thị thông báo "Thông tin chưa đầy đủ"
+        else Máy chủ gặp lỗi
+            Hệ thống->>Người dùng: Hiển thị thông báo "Có lỗi xảy ra"
+        else Máy chủ xử lý thành công
+            Hệ thống->>Người dùng: Hiển thị thông báo "Cập nhật dữ liệu thành công"
+        end
+    end
